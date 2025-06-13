@@ -49,3 +49,21 @@ The winner announcement is displayed with a nice animation
 Assemble with NASM: nasm pong.asm -o pong.com
 
 Run in DOS or DOSBox: pong.com
+## 🕹️ Controls
+
+- Player A: Arrow keys (←, →)
+- Player B: S (left), D (right)
+
+## 🏁 Scoring and Termination
+
+- Player scores if opponent misses the ball.
+- First to 5 points wins.
+
+## 👥 Contributors
+
+- [Muhammad Zaigham Asif](https://github.com/MuhammadZaighamAsif)
+- [Abdul Hannan](https://github.com/RanaAbdulHannan)
+
+> **Institution**: FAST NUCES Lahore  
+> **Course**: Computer Organization & Assembly Language, Fall 2024
+
