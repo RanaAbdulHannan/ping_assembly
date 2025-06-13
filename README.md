@@ -45,8 +45,12 @@ Scores are displayed at the bottom of the screen
 
 The winner announcement is displayed with a nice animation
 
-# How to Run
-Assemble with NASM: nasm pong.asm -o pong.com
+## 🚀 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/RanaAbdulHannan/ping_assembly.git
+   cd ping_assembly
 
 Run in DOS or DOSBox: pong.com
 ## 🕹️ Controls
