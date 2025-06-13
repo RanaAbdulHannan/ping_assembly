@@ -5,10 +5,9 @@ paddleB:dw 3910
 innitialA:dw 70
 innitialB:dw 3910
 starpos:dw 3758
-pflag: dw 1  ;1 ha to A ka paddle move kera ga
-dirflag:dw 1; 1 ha to B ki baari ma sub 162 or A ki baari ma add 158
-	    ; 0 ha to B ki baari ma sub 158 or A ki baari ma add 162 
-ticks: dw 0
+pflag: dw 1  ;if 1 then paddle of A will move that is the upper paddle 
+dirflag:dw 1; if 1 then 162 will be subtracted from B and for A 158 will be added  
+	    ;if  0 then 158 will be subtracted from and 162 will be added to A 
 scoreA:db 0x30
 scoreB:db 0x30
 row:dw 24
@@ -144,7 +143,7 @@ timer:
 	pusha
 	push cs
 	pop ds
-	cmp word [ticks],2
+	cmp word [ticks],1  ; speed of the ball can be changed i.e.can be slowed if the number is increased 
 	jne print2
 	mov word[ticks],0
 	mov cx,[starpos]
