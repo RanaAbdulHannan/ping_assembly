@@ -1,58 +1,63 @@
 # ping_assembly
-This is a classic Pong game implementation written in x86 assembly language for DOS environment. The game features two paddles controlled by players, a bouncing ball, and a scoring system.
-## Game Description
-### Gameplay
-Player A controls the left paddle using the left and right arrow keys.
 
-Player B controls the right paddle using the 'S' and 'D' keys.
+This is a classic Pong game implementation written in x86 assembly language for the DOS environment. The game features two paddles controlled by players, a bouncing ball, and a scoring system.
 
-The ball bounces between the paddles and the top/bottom walls.
+---
 
-If a player misses the ball, the opponent scores a point.
+## 🎮 Game Description
 
-The first player to reach 5 points wins the game.
+### 🕹️ Gameplay
+- **Player A** controls the left paddle using the **←** and **→** arrow keys.  
+- **Player B** controls the right paddle using the **S** (left) and **D** (right) keys.  
+- The ball bounces between paddles and walls.  
+- Missing the ball lets the opponent score.  
+- First player to reach **5 points** wins the game.
 
-### Technical Details
-Uses BIOS interrupts for keyboard input and timer functionality
+---
 
-Directly writes to video memory (0xB800) for display
+## 🛠️ Technical Details
+- Uses **BIOS interrupts** for keyboard and timer functionality.
+- Direct video memory manipulation at `0xB800` for rendering.
+- Custom **keyboard (INT 09h)** and **timer (INT 08h)** interrupt handlers.
+- Clean screen refresh, score tracking, and winner display logic.
 
-Implements custom keyboard and timer interrupt service routines
+---
 
-Features a clean screen refresh system
+## 💾 Memory Usage
+- `paddleA`, `paddleB` — Paddle positions  
+- `starpos`, `row`, `col` — Ball position  
+- `pflag`, `dirflag` — Game state  
+- `scoreA`, `scoreB` — Player scores  
+- `oldkb`, `oldisr` — Original interrupt vectors (to restore after game ends)
 
-Includes score tracking and display
+---
 
-### Memory Usage
-The game uses various memory locations to track:
+## 🧱 Visual Elements
+- Paddles: White vertical bars (20 characters wide)  
+- Ball: Asterisk `*` with color change  
+- Scores: Displayed at the bottom  
+- Winner: Animated winner announcement at game end
 
-Paddle positions (paddleA, paddleB)
+---
 
-Ball position (starpos, row, col)
+## ⚙️ Installation Steps
 
-Game state flags (pflag, dirflag)
 
-Scores (scoreA, scoreB)
-
-Original interrupt vectors (oldkb, oldisr)
-
-### Visual Elements
-Paddles are displayed as white bars (20 characters wide)
-
-The ball is represented by an asterisk (*) that changes color
-
-Scores are displayed at the bottom of the screen
-
-The winner announcement is displayed with a nice animation
-
-## 🚀 Installation
-
-1. **Clone the repository**
+###1. Clone the repository
    ```bash
    git clone https://github.com/RanaAbdulHannan/ping_assembly.git
    cd ping_assembly
+```
+### 2. Assemble the Code Using NASM
+```bash
+nasm coal.asm -o coal.com
+```
+### 3.Run It 
+```bash
+coal.com
+```
 
-Run in DOS or DOSBox: pong.com
+
 ## 🕹️ Controls
 
 - Player A: Arrow keys (←, →)
