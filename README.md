@@ -1,7 +1,7 @@
 # ping_assembly
 This is a classic Pong game implementation written in x86 assembly language for DOS environment. The game features two paddles controlled by players, a bouncing ball, and a scoring system.
-# Game Description
-# Gameplay
+## Game Description
+### Gameplay
 Player A controls the left paddle using the left and right arrow keys.
 
 Player B controls the right paddle using the 'S' and 'D' keys.
@@ -12,7 +12,7 @@ If a player misses the ball, the opponent scores a point.
 
 The first player to reach 5 points wins the game.
 
-# Technical Details
+### Technical Details
 Uses BIOS interrupts for keyboard input and timer functionality
 
 Directly writes to video memory (0xB800) for display
@@ -23,7 +23,7 @@ Features a clean screen refresh system
 
 Includes score tracking and display
 
-# Memory Usage
+### Memory Usage
 The game uses various memory locations to track:
 
 Paddle positions (paddleA, paddleB)
@@ -36,7 +36,7 @@ Scores (scoreA, scoreB)
 
 Original interrupt vectors (oldkb, oldisr)
 
-# Visual Elements
+### Visual Elements
 Paddles are displayed as white bars (20 characters wide)
 
 The ball is represented by an asterisk (*) that changes color
