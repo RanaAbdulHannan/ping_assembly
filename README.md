@@ -67,6 +67,9 @@ coal.com
 
 - Player scores if opponent misses the ball.
 - First to 5 points wins.
+## Gameplay Demo 
+
+![Gameplay Demo](coalproject.video.gif)
 
 ## 👥 Contributors
 
