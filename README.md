@@ -48,7 +48,7 @@ This is a classic Pong game implementation written in x86 assembly language for 
    git clone https://github.com/RanaAbdulHannan/ping_assembly.git
    cd ping_assembly
 ```
-### 2. Assemble the Code Using NASM
+### 2. Assemble the Code Using NASM on Dosbox
 ```bash
 nasm coal.asm -o coal.com
 ```
