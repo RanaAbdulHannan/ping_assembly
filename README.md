@@ -43,7 +43,7 @@ This is a classic Pong game implementation written in x86 assembly language for 
 ## ⚙️ Installation Steps
 
 
-###1. Clone the repository
+### 1. Clone the repository
    ```bash
    git clone https://github.com/RanaAbdulHannan/ping_assembly.git
    cd ping_assembly
